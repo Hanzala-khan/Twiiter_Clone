@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWATTER</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="css links/main.css">
+    <!-------------------------------- FONTS ------------------------------------>
+    <!-- PRIMARY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- SECONDARY FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWSOME LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FAV ICON -->
+      <link rel="icon" type="image/png" href="img/ICONS/Web/icons8-twitter-windows-11-color-120">
+</head>
+
+<body>
+    <!-- MAIN SECTINO START -->
+    <main>
+        <section class="navigation_section">
+            <nav>
+                <span><i class="fa-brands fa-twitter"></i></span>
+                <div class="navigation_column">
+                    <div class="navigation_container">
+                        <a href="#">
+                            <div class="buttons home">
+                                <span><i class="fa-solid fa-house-user"></i></span>
+                                <span>Home</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons explore">
+                                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span>Explore</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons Notifications">
+                                <span><i class="fa-regular fa-bell"></i></span>
+                                <span>Notifications</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons Messages">
+                                <span><i class="fa-regular fa-envelope"></i></span>
+                                <span>Messages</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons Lists">
+                                <span><i class="fa-solid fa-rectangle-list"></i></span>
+                                <span>Lists</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons Bookmarks">
+                                <span><i class="fa-regular fa-envelope"></i></span>
+                                <span>Bookmarks</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons Verified">
+                                <span><i class="fa-solid fa-circle-check"></i></span>
+                                <span>Verified</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons profile">
+                                <span><i class="fa-regular fa-user"></i></span>
+                                <span>profile</span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="buttons more">
+                                <span><i class="fa-solid fa-ellipsis"></i></span>
+                                <span>More</span>
+                            </div>
+                        </a>
+                        <a href="#" class="tweet_link">
+                            <div class="tweet_btn">
+                                <span>
+                                    Tweet
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="avatar_container">
+                        <div class="user_avatar_n_info">
+                            <div class="avatar_img">
+                                <img src="img/avatars/s_avatar.png" alt="User Avatar">
+                            </div>
+                            <div class="avatar_info">
+                                <span>Hanzla</span>
+                                <span>@hanzla2025</span>
+                            </div>
+                        </div>
+                        <div class="account_info">
+                            <i class="fa-solid fa-ellipsis" id="toggleIcon"></i>
+                            <div class="toggle_info" id="toggleDiv">
+                                <div class="login_signup_info">
+                                    <a href="#">
+                                        <span>log Out</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Add an Excisting Account</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <!----------------------------------------  NOTIFICATION SECTION END  ------------------------------------------------>
+        <!----------------------------------------  HOME SECTION START  ------------------------------------------------>
+        <section class="home_section">
+            <div class="feed_container">
+                <div class="header_scrolling">
+                    <div class="page_title">
+                        <span>Home</span>
+                    </div>
+                    <!-- FEEDS BUTTONS -->
+                    <div class="feed_buttons">
+                        <div class="auto_feed">
+                            <span>For You</span>
+                            <div class="active_state_bar">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="following_feed">
+                            <span>Following</span>
+                            <div class="active_state_bar">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- POSTING CONTAINER -->
+                <div class="posting_container">
+                    <img src="img/avatars/s_avatar.png" alt="user avatar" class="user_avatar">
+                    <div class="media_box">
+                        <div class="input_box">
+                            <input type="text" placeholder="What is Happening?!" id="post_input_field">
+                            <a href="#">
+                                <span><i class="fa-solid fa-globe"></i></span>
+                                <span>Everyone Can Reply</span>
+                            </a>
+                        </div>
+                        <div class="media_sharing_container">
+                            <div class="icons">
+                                <span><i class="fa-solid fa-image"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-gift"></i></span>
+                                <span><i class="fa-solid fa-square-poll-horizontal"></i></span>
+                                <span><i class="fa-solid fa-face-smile"></i></span>
+                                <span><i class="fa-solid fa-calendar-days"></i></span>
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                            </div>
+                            <div class="tweet_button">
+                                <a href="#" id="submitButton">
+                                    <span>Tweet</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_notifications">
+                    <a href="#">
+                        <span>Show 90 more Twats!</span>
+                    </a>
+                </div>
+                <div class="user_posts">
+                    <div class="user_identity_section" style="cursor: pointer;">
+                        <div class="users_profile">
+                            <img src="img/users_profile_icons/user_profile_1.jpg" alt="user_1 avatar">
+                        </div>
+                        <div class="post_right_column">
+                            <div class="post_header">
+                                <div class="user_name">
+                                    <span>Name of user</span>
+                                    <!-- <span><i></i></span> -->
+                                    <span>@user_address</span>
+                                    <span>-20h</span>
+                                    <p>3D Render of a Topographic Map of Europe</p>
+                                </div>
+                                <div class="about_user_tooltip">
+                                    <i class="fa-solid fa-ellipsis" id="toggleUserIcon"></i>
+                                    <div class="about_container" id="toggleUserMenu" style="display: none;">
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-face-frown"></i></span>
+                                            <span>Not Instrested in this tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-right-to-bracket"></i></span>
+                                            <span>follow @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-plus-minus"></i></span>
+                                            <span>add or remove @user from list</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-volume-xmark"></i></span>
+                                            <span>Mute @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-bell-slash"></i></span>
+                                            <span>Block @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-anchor"></i></span>
+                                            <span>Embed Tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-question"></i></span>
+                                            <span>Report Tweet</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_container">
+                                <div class="post_body">
+                                    <div class="post_img">
+                                        <img src="img/users_posts/user_1_post.jpg" alt="map of Europe">
+                                    </div>
+                                </div>
+                                <div class="post_footer">
+                                    <div class="post_interactions">
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-comment"></i></span>
+                                            <span>400</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-retweet"></i></span>
+                                            <span>40900</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-heart"></i></span>
+                                            <span>45.8k</span>
+                                        </a>
+                                        <a class="comments">
+                                            <i class="fa-solid fa-chart-simple"></i>
+                                            <span>1.5M</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_posts">
+                    <div class="user_identity_section" style="cursor: pointer;">
+                        <div class="users_profile">
+                            <img src="img/users_profile_icons/user_profile_1.jpg" alt="user_1 avatar">
+                        </div>
+                        <div class="post_right_column">
+                            <div class="post_header">
+                                <div class="user_name">
+                                    <span>Name of user</span>
+                                    <!-- <span><i></i></span> -->
+                                    <span>@user_address</span>
+                                    <span>-20h</span>
+                                    <p>3D Render of a Topographic Map of Europe</p>
+                                </div>
+                                <div class="about_user_tooltip">
+                                    <i class="fa-solid fa-ellipsis" id="toggleUserIcon"></i>
+                                    <div class="about_container" id="toggleUserMenu" style="display: none;">
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-face-frown"></i></span>
+                                            <span>Not Instrested in this tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-right-to-bracket"></i></span>
+                                            <span>follow @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-plus-minus"></i></span>
+                                            <span>add or remove @user from list</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-volume-xmark"></i></span>
+                                            <span>Mute @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-bell-slash"></i></span>
+                                            <span>Block @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-anchor"></i></span>
+                                            <span>Embed Tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-question"></i></span>
+                                            <span>Report Tweet</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_container">
+                                <div class="post_body">
+                                    <div class="post_img">
+                                        <img src="img/users_posts/user_post_3.jpg" alt="map of Europe">
+                                    </div>
+                                </div>
+                                <div class="post_footer">
+                                    <div class="post_interactions">
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-comment"></i></span>
+                                            <span>400</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-retweet"></i></span>
+                                            <span>40900</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-heart"></i></span>
+                                            <span>45.8k</span>
+                                        </a>
+                                        <a class="comments">
+                                            <i class="fa-solid fa-chart-simple"></i>
+                                            <span>1.5M</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_posts">
+                    <div class="user_identity_section" style="cursor: pointer;">
+                        <div class="users_profile">
+                            <img src="img/users_profile_icons/user_profile_1.jpg" alt="user_1 avatar">
+                        </div>
+                        <div class="post_right_column">
+                            <div class="post_header">
+                                <div class="user_name">
+                                    <span>Name of user</span>
+                                    <!-- <span><i></i></span> -->
+                                    <span>@user_address</span>
+                                    <span>-20h</span>
+                                    <p>3D Render of a Topographic Map of Europe</p>
+                                </div>
+                                <div class="about_user_tooltip">
+                                    <i class="fa-solid fa-ellipsis" id="toggleUserIcon"></i>
+                                    <div class="about_container" id="toggleUserMenu" style="display: none;">
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-face-frown"></i></span>
+                                            <span>Not Instrested in this tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-right-to-bracket"></i></span>
+                                            <span>follow @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-plus-minus"></i></span>
+                                            <span>add or remove @user from list</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-volume-xmark"></i></span>
+                                            <span>Mute @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-bell-slash"></i></span>
+                                            <span>Block @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-anchor"></i></span>
+                                            <span>Embed Tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-question"></i></span>
+                                            <span>Report Tweet</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_container">
+                                <div class="post_body">
+                                    <div class="post_img">
+                                        <img src="img/users_posts/user_post_2.jpg" alt="map of Europe">
+                                    </div>
+                                </div>
+                                <div class="post_footer">
+                                    <div class="post_interactions">
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-comment"></i></span>
+                                            <span>400</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-retweet"></i></span>
+                                            <span>40900</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-heart"></i></span>
+                                            <span>45.8k</span>
+                                        </a>
+                                        <a class="comments">
+                                            <i class="fa-solid fa-chart-simple"></i>
+                                            <span>1.5M</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user_posts">
+                    <div class="user_identity_section" style="cursor: pointer;">
+                        <div class="users_profile">
+                            <img src="img/users_profile_icons/user_profile_1.jpg" alt="user_1 avatar">
+                        </div>
+                        <div class="post_right_column">
+                            <div class="post_header">
+                                <div class="user_name">
+                                    <span>Name of user</span>
+                                    <!-- <span><i></i></span> -->
+                                    <span>@user_address</span>
+                                    <span>-20h</span>
+                                    <p>Topographic Map of Polan</p>
+                                </div>
+                                <div class="about_user_tooltip">
+                                    <i class="fa-solid fa-ellipsis" id="toggleUserIcon"></i>
+                                    <div class="about_container" id="toggleUserMenu" style="display: none;">
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-face-frown"></i></span>
+                                            <span>Not Instrested in this tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-right-to-bracket"></i></span>
+                                            <span>follow @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-plus-minus"></i></span>
+                                            <span>add or remove @user from list</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-volume-xmark"></i></span>
+                                            <span>Mute @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-bell-slash"></i></span>
+                                            <span>Block @user</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-anchor"></i></span>
+                                            <span>Embed Tweet</span>
+                                        </a>
+                                        <a href="#">
+                                            <span><i class="fa-solid fa-question"></i></span>
+                                            <span>Report Tweet</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post_container">
+                                <div class="post_body">
+                                    <div class="post_img">
+                                        <img src="img/users_posts/user_post_4.jpg" alt="map of Europe">
+                                    </div>
+                                </div>
+                                <div class="post_footer">
+                                    <div class="post_interactions">
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-comment"></i></span>
+                                            <span>400</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-retweet"></i></span>
+                                            <span>40900</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-heart"></i></span>
+                                            <span>45.8k</span>
+                                        </a>
+                                        <a class="comments">
+                                            <i class="fa-solid fa-chart-simple"></i>
+                                            <span>1.5M</span>
+                                        </a>
+                                        <a class="comments">
+                                            <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!----------------------------------------  HOME SECTION END  ------------------------------------------------>
+        <!----------------------------------------  SEARCH SECTION START  ------------------------------------------------>
+        <section class="search_section" style="padding: var(--md-padding) 0;">
+            <!-- <span><i class="fa fa-magnifying-glass"></i></span> -->
+            <h1 style="padding: var(--md-padding); font-size: 3rem;">
+                Under Construction
+            </h1>
+        </section>
+    </main>
+    <a target="_blank" href="https://icons8.com/icon/5MQ0gPAYYx7a/twitter">Twitter</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <script src="main.js"></script>
+</body>
+
+</html>

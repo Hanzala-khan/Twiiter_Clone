@@ -1,0 +1,643 @@
+/****************************************************
+          ROOT STYLINGS
+****************************************************/
+:root {
+    /************ COLOR SCHEME ***********/
+    /*  PRIMARY COLORs  */
+    --primary-text-color: #1DA1F2;
+    --primary-text-hovere: HSLA(200, 89%, 52%, .9);
+    /* TWITTER BLUE --> FOR LNKS / BUTTONS / HIGHLIGHTS*/
+    --primary-white-text-color: #FFFFFF;
+    /* TWITTER WHITE --> FOR  TEXT AND ICONS IN DARK MODE*/
+    /*  SECONDARY COLORs  */
+    --secondary-green: #17BF63;
+    --secondary-orange: #FFAD1F;
+    --secondary-purple: #794BC4;
+    --secondary-red: rgb(213, 40, 76);
+    /*  Additional Colors for Dark Mode: */
+    --bg-dark-mode: #14171A;
+    --subtle-text: rgb(255 255 255 /30%);
+    --bg-boxes-dividers-color: rgb(255 255 255 /20%);
+    --lighter-bg: #E1E8ED;
+    --scroll-transparent-color:rgba(0, 0, 0, 0.8);;
+    /*  HOVER EFFECTS COLORS  */
+    --subtle-hover: rgb(100 88 88 / 20%);
+    /************  FONTs *************/
+    --primary-font: 'Ubuntu', sans-serif;
+    /* FONTS FOR >>>>>  HEADINGS / BUTTONS / USERSNAME / LINKS <<<<<< */
+    --secondary-font: 'Roboto', sans-serif;
+    /* FONTS FOR >>>>>  BODY TEXT <<<<<< */
+    /************  RESPONSIVE BREAKEPOINTS   *************/
+    --mobile-sm: 320px;
+    --mobile-md: 375px;
+    --mobile-lg: 425px;
+    --tablet: 768px;
+    --laptop-sm: 1024px;
+    --laptop-lg: 1440px;
+    /************  PADDINGS  *************/
+    --sm-padding: 10px;
+    --md-padding: 12px;
+    --lg-padding: 16px;
+    --xlg-padding: 20px;
+    --xxlg-padding: 35px;
+    /************  MARGINS *************/
+    --sm-margin: 10px;
+    --md-margin: 12px;
+    --lg-margin: 16px;
+    --xlg-margin: 20px;
+    /************  FONT SIZES *************/
+    --sm-font-size: 13px;
+    --md-font-size: 15px;
+    --lg-font-size: 20px;
+    --icons-font-size: 20px;
+    /************  BORDER RADUIS *************/
+    --border-radius: 30px;
+    --md-border-radius: 20px;
+    --lighter-border-radius: 10px;
+    /************  AVATAR WIDTHS AND HEIGHTS *************/
+    --avatar-size: 40px;
+}
+
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    color: var(--primary-white-text-color);
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: var(--bg-dark-mode);
+    color-scheme: dark;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    /*    text-decoration: underline;*/
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    opacity: .8;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/**********************************************************
+                      MAIN SECTION STYLING
+**********************************************************/
+
+main {
+    width: 1300px;
+    display: grid;
+    grid-template-columns: 22% 1fr 25%;
+    grid-template-rows: auto;
+    /*    border: 2px solid blue;*/
+    margin: 0 auto;
+}
+
+/**********************************
+        NAVIGATION SECTION
+**********************************/
+
+section.navigation_section {
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    padding: var(--md-padding);
+    8px;
+}
+
+/************** TWITTER LOGO STYLING *****************/
+
+
+nav>span>i {
+    color: var(--lighter-bg);
+    font-size: 30px;
+}
+
+/************ NAVIGATION COLUMN STYLING *************/
+
+nav>span,
+div.navigation_container>a>div.buttons,
+div.tweet_btn,
+div.user_avatar {
+    padding: var(--sm-padding);
+}
+
+div.navigation_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* NAVIGATION MENU STYLINGS */
+
+div.navigation_container {
+    padding: var(--lg-padding) 0;
+}
+
+div.navigation_container>a {
+    display: block;
+    width: 100%;
+    padding: 2px 0;
+}
+
+div.navigation_container>a:hover>.buttons {
+    background-color: var(--subtle-text);
+    border-radius: var(--border-radius);
+}
+
+div.navigation_container>a>div.buttons {
+    display: inline-block;
+    font-size: var(--lg-font-size);
+}
+
+div.navigation_container> :nth-child(n+2)>div.buttons>span {
+    color: var(--lighter-bg);
+}
+
+div.buttons> :nth-child(1) {
+    padding-right: var(--lg-padding);
+}
+
+/* TWEET BUTTON */
+.tweet_link {
+    margin-top: var(--sm-margin);
+    background-color: var(--primary-text-color);
+    border-radius: var(--border-radius);
+}
+
+.tweet_link:hover {
+    background-color: var(--primary-text-hovere);
+}
+
+div.tweet_btn {
+    text-align: center;
+    font-weight: bolder;
+}
+
+/************************ USER AVATAR STYLING ****************/
+
+.avatar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--lg-margin);
+    padding-top: var(--lg-padding);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    padding: var(--md-padding) var(--lg-padding) 5px;
+}
+
+.avatar_container:hover {
+    background-color: var(--secondary-green);
+}
+
+div.user_avatar_n_info {
+    display: flex;
+}
+
+div.avatar_img>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid green;
+}
+
+div.user_avatar_n_info> :nth-child(2) {
+    align-self: center;
+}
+
+div.avatar_info {
+    padding-left: 10px;
+}
+
+div.avatar_info span {
+    display: block;
+    font-weight: bolder;
+}
+
+div.avatar_info> :nth-child(2) {
+    font-size: var(--sm-font-size);
+    color: var(--subtle-text);
+}
+
+/* ACCOUNT INFO STYLING */
+
+div.account_info {
+    align-self: center;
+    position: relative;
+}
+
+div.account_info>i {
+    cursor: pointer;
+}
+
+div.toggle_info {
+    position: absolute;
+    top: -7rem;
+    left: -15.6rem;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 1);
+    border-radius: var(--lighter-border-radius);
+    width: 250px;
+    padding: var(--md-padding) 0 var(--sm-padding);
+    background-color: var(--bg-dark-mode);
+    display: none;
+    /*    transition: all 3s ease-in;*/
+}
+
+div.toggle_info:after {
+    content: "";
+    position: absolute;
+    top: 115%;
+    left: 50%;
+    border-style: solid;
+    /*    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 1);*/
+    border-width: 20px;
+    border-color: var(--bg-boxes-dividers-color) transparent transparent transparent;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+
+div.login_signup_info {
+    border-top: 1px solid var(--bg-boxes-dividers-color);
+}
+
+div.login_signup_info>a {
+    display: block;
+    width: 100%;
+    padding: 5px var(--md-padding);
+}
+
+div.login_signup_info>a:hover {
+    background-color: var(--subtle-text);
+}
+
+/************************************************************************
+                          STYLING FEED SECTION
+**************************************************************************/
+
+/*********** MAIN SECTION STYLING **************/
+
+section.home_section {
+    padding: var(--md-padding) 0 0;
+    border: 1px solid var(--subtle-text);
+    border-top: none;
+    border-bottom: none;
+}
+
+/* HEADING SCROLLING EFFECT */
+div.header_scrolling {
+/*    position: relative;*/
+    top: 0;
+    position: sticky;
+    transition: background-color 0.3s ease;
+}
+
+div.header_scrolling.scrolled{
+    background-color: var(--scroll-transparent-color);
+}
+
+/* PAGE TITLE STYLING */
+
+div.page_title {
+    padding: 0 var(--lg-padding);
+    /*  FOR EVERY CONTAINER IN THE FEED SECTION */
+}
+
+div.page_title>span {
+    font-size: var(--lg-font-size);
+    font-family: var(--primary-font);
+    font-weight: bolder;
+}
+
+/* FEED BUTTONS STYLINGS */
+
+div.feed_buttons {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+div.feed_buttons> :nth-child(n+1) {
+    flex: 1 1 auto;
+    font-weight: bolder;
+    padding: var(--md-padding) 0;
+}
+
+div.feed_buttons> :nth-child(1)>span {
+    border-bottom: 4px solid var(--primary-text-color);
+    padding-bottom: var(--sm-padding);
+}
+
+div.feed_buttons> :nth-child(2)>span {
+    padding-bottom: var(--sm-padding);
+    color: var(--subtle-text);
+}
+
+div.feed_buttons> :nth-child(n+1):hover {
+    background-color: var(--subtle-hover);
+}
+
+/*********** POSTING STYLING **************/
+
+/******* CONTAINER STYLING *******/
+div.posting_container {
+    display: flex;
+    padding: var(--md-padding) var(--lg-padding);
+    column-gap: var(--md-padding);
+    border-top: 1px solid var(--subtle-text);
+    border-bottom: 1px solid var(--subtle-text);
+}
+
+/* AVAFTAR STYLING */
+
+div.posting_container>.user_avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    border: 2px solid var(--secondary-green);
+}
+
+/* MEDIA-BOX STYLING */
+
+div.media_box {
+    flex: 1 1 auto;
+}
+
+div.media_box>div.input_box>input[type="text"] {
+    display: block;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0 0 var(--md-padding);
+}
+
+div.input_box {
+    padding-bottom: var(--sm-padding);
+    border-bottom: 1px solid var(--subtle-text);
+}
+
+div.input_box>a {
+    display: inline-block;
+}
+
+div.input_box>a> :nth-child(n+1) {
+    font-size: var(--sm-font-size);
+    font-weight: bolder;
+    color: var(--primary-text-color);
+}
+
+/* MEDIA BOX >>> media sharing container <<<<< */
+
+div.media_sharing_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: var(--sm-padding);
+}
+
+div.media_sharing_container> :first-child>span {
+    padding-right: var(--sm-padding);
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+div.tweet_button>#submitButton {
+    display: inline-block;
+    padding: 5px var(--lg-padding);
+    background: var(--primary-text-hovere);
+    border-radius: 1.5rem;
+    font-size: var(--lg-font-size);
+    font-weight: bold;
+}
+
+
+/* NEW NOTIFICATIONS CONTAINER */
+
+div.new_notifications {
+    display: flex;
+    justify-content: center;
+    padding: var(--sm-padding) 0;
+    border-bottom: 1px solid var(--subtle-text);
+}
+
+div.new_notifications>a>span {
+    color: var(--primary-text-color);
+}
+
+
+/****************************************  POSTING CONTAINER ********************************************/
+
+div.user_posts {
+    padding: var(--sm-padding) var(--lg-padding);
+    border-bottom: 1px solid var(--subtle-text);
+}
+
+div.user_identity_section {
+    display: flex;
+    column-gap: var(--md-padding);
+}
+
+div.user_identity_section>div.users_profile>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-orange);
+}
+
+/******* STYLING POSTING RIGHT COLUMN ********/
+.post_right_column {
+    flex: 1 auto;
+}
+
+/* POST SECTION <<<<< header  >>>> */
+div.post_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.user_name> :first-child {
+    font-weight: bolder;
+    font-size: var(--md-font-size);
+}
+
+div.user_name> :nth-child(n+2):nth-child(-n+3) {
+    font-size: var(--sm-font-size);
+    color: var(--subtle-text);
+}
+
+div.user_name> :last-child {
+    font-family: var(--primary-font);
+    font-size: var(--md-font-size);
+}
+
+/* TOOTL-TIP DESIGN */
+
+div.about_user_tooltip>i {
+    color: var(--subtle-text);
+    cursor: pointer;
+}
+
+div.about_user_tooltip>i:hover {
+    color: var(--primary-text-color);
+}
+
+div.about_user_tooltip {
+    position: relative;
+}
+
+div.about_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0px 0px 5px 1px rgb(255 255 255);
+    border-radius: var(--lighter-border-radius);
+    width: 300px;
+    padding: var(--md-padding) 0 var(--sm-padding);
+    background-color: var(--bg-dark-mode);
+    transition: all .3s ease-in;
+    /*    display: none;*/
+}
+
+div.about_container>a {
+    display: block;
+    display: flex;
+    /*    justify-content: space-between;*/
+    column-gap: var(--md-padding);
+    padding: var(--sm-padding) var(--md-padding);
+}
+
+div.about_container>a:hover {
+    background-color: var(--subtle-hover);
+}
+
+/* POST SECTION <<< POST BODY >>> */
+
+div.post_container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.post_body {
+    padding: var(--sm-padding) 0;
+    flex: 1 auto;
+}
+
+div.post_img>img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: var(--lighter-border-radius);
+}
+
+/* POST SECTION <<< FOOTER STYLING >>>> */
+
+.post_interactions {
+    display: flex;
+    column-gap: var(--xxlg-padding);
+}
+
+div.post_interactions>a> :nth-child(n+1) {
+    color: var(--subtle-text);
+    font-weight: 200;
+}
+
+div.post_interactions>a> :nth-child(1) {
+    padding-right: var(--sm-padding);
+}
+
+div.post_interactions>a> :nth-child(2) {
+    font-size: var(--sm-font-size);
+}
+
+div.post_interactions>a:hover> :nth-child(n+1) {
+    color: var(--primary-text-color);
+}
+
+div.post_interactions> :nth-child(2):hover> :nth-child(n+1) {
+    color: var(--secondary-green);
+}
+
+div.post_interactions> :nth-child(3):hover> :nth-child(n+1) {
+    color: var(--secondary-red);
+}
+
+
+/**************************************************************************************
+            SEARCH SECTION
+****************************************************************************************/
+
+
+
+.search_section > h1{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to top left, var(--primary-text-color) , var(--secondary-green));
+    background-position: 50% 50%;
+}
